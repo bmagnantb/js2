@@ -191,7 +191,8 @@ function filterLongWords(words, i) {
     var x = 0;
     words.forEach(function(value, index) {
         if (value.length > i) {
-
+        	longest[x] = value;
+        	x++;
         }
     })
     return longest;
