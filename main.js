@@ -191,14 +191,13 @@ function filterLongWords(words, i) {
     var x = 0;
     words.forEach(function(value, index) {
         if (value.length > i) {
-            longest[x] = value;
-            x++;
+
         }
     })
     return longest;
 }
 
-console.log(filterLongWords(["anemone", "nemo", "fish", "jellyfish", "narwhal", "pelican"],5));
+console.log(filterLongWords(["anemone", "nemo", "fish", "jellyfish", "narwhal", "pelican"], 5));
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
@@ -206,5 +205,15 @@ console.log(filterLongWords(["anemone", "nemo", "fish", "jellyfish", "narwhal", 
 
 function charFreq(string) {
     "use strict";
-    //...
+    var freq = new Object();
+    for (var i = 0; i < string.length; i++) {
+    	if (freq[string[i]] === undefined) {
+    		freq[string[i]] = 0;
+    	}
+    	freq[string[i]] += 1;
 }
+    return freq;
+}
+
+console.log(charFreq("Hahaha arararar kkkkk"));
+
